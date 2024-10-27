@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Fade from 'react-reveal/Fade'; // Import the animation component
-import Zoom from 'react-reveal/Zoom'; // Additional animation for the image
-import Modal from './Modal'; // Import the Modal component
+import Fade from 'react-reveal/Fade'; 
+import Zoom from 'react-reveal/Zoom'; 
+import Modal from './Modal'; 
 
 const Content = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -42,7 +42,7 @@ const Content = () => {
           bio: "Toji Fushiguro is a powerful jujutsu sorcerer from the Jujutsu Kaisen series."
         }
       },
-    // Add more characters as needed
+    
   ];
 
   const handleCardClick = (character) => {
@@ -87,7 +87,7 @@ const Content = () => {
 
 export default Content;
 
-// Styled Components
+
 const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -103,7 +103,7 @@ const ContentContainer = styled.div`
   z-index: 1;
 
   @media (max-width: 768px) {
-    padding: 20px; // Reduce padding for mobile
+    padding: 20px; 
   }
 `;
 
@@ -117,7 +117,7 @@ const CardWrapper = styled.div`
   cursor: pointer;
 
   @media (max-width: 768px) {
-    flex-direction: column; // Stack the image and text on mobile
+    flex-direction: column; 
     align-items: center;
   }
 `;
@@ -130,7 +130,7 @@ const ImageWrapper = styled.div`
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
   width: 100%;
-  max-width: 400px; // Limit image width on larger screens
+  max-width: 400px; 
   margin: 0 20px;
 
   &:hover {
@@ -138,14 +138,14 @@ const ImageWrapper = styled.div`
   }
 
   @media (max-width: 768px) {
-    max-width: 100%; // Full width on mobile
-    margin: 0; // Remove margin on mobile
+    max-width: 100%; 
+    margin: 0;
   }
 `;
 
 const Image = styled.img`
   width: 100%;
-  height: auto; // Maintain aspect ratio
+  height: auto; 
   border-radius: 15px;
   transition: transform 0.5s ease;
 
@@ -156,7 +156,7 @@ const Image = styled.img`
 
 const TextContainer = styled.div`
   max-width: 600px;
-  text-align: left; // Align text left
+  text-align: left; 
 
   h2 {
     margin-bottom: 20px;
@@ -169,7 +169,7 @@ const TextContainer = styled.div`
     }
 
     @media (max-width: 768px) {
-      font-size: 1.5rem; // Adjust font size for mobile
+      font-size: 1.5rem; 
     }
   }
 
@@ -179,7 +179,7 @@ const TextContainer = styled.div`
     animation: fadeIn 1s ease forwards;
 
     @media (max-width: 768px) {
-      font-size: 1rem; // Adjust font size for mobile
+      font-size: 1rem; 
     }
   }
 
