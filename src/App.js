@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Banner from './components/Banner';
 import Content from './components/Content';
 import ReviewCarousel from './components/RiviewCaraousel';
-import Footer from './components/Footer'; // Import your new Content component
+import Footer from './components/Footer'; 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
