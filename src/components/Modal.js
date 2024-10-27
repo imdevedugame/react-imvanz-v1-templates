@@ -21,7 +21,7 @@ const Modal = ({ character, onClose }) => {
 
 export default Modal;
 
-// Styled Components for Modal
+
 const ModalOverlay = styled.div`
   position: fixed;
   top: 0;
@@ -55,7 +55,7 @@ const ModalContainer = styled.div`
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
-  animation: slideIn 0.3s forwards; // Slide in effect
+  animation: slideIn 0.3s forwards; 
 
   @keyframes slideIn {
     from {
@@ -73,27 +73,27 @@ const CharacterImage = styled.img`
   width: 50%;
   height: auto;
   object-fit: cover;
-  border-top-left-radius: 15px; // Round the top left corner
-  border-bottom-left-radius: 15px; // Round the bottom left corner
-  border: 2px solid #e7e7e7; // Subtle border around the image
+  border-top-left-radius: 15px; 
+  border-bottom-left-radius: 15px; 
+  border: 2px solid #e7e7e7; 
 `;
 
 const CharacterInfo = styled.div`
-  padding: 30px; // Increased padding for better spacing
+  padding: 30px; 
   width: 50%;
   
   h2 {
-    margin: 0 0 15px; // More space below the title
+    margin: 0 0 15px; 
     color: #333;
-    font-size: 24px; // Larger title font size
-    text-transform: uppercase; // Uppercase title
-    letter-spacing: 1px; // Letter spacing for effect
+    font-size: 24px; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
   }
   
   p {
-    margin: 10px 0; // More space between paragraphs
-    color: #555; // Darker gray for better readability
-    line-height: 1.5; // Improved line height for readability
+    margin: 10px 0; 
+    color: #555; 
+    line-height: 1.5; 
   }
 `;
 
@@ -105,10 +105,10 @@ const CloseButton = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s; // Smooth transition
+  transition: background 0.3s ease, transform 0.2s; 
 
   &:hover {
-    background: #0056b3; // Darker shade on hover
-    transform: scale(1.05); // Slightly enlarge button on hover
+    background: #0056b3; 
+    transform: scale(1.05); 
   }
 `;
