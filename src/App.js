@@ -15,7 +15,7 @@ function App() {
       <Banner />
       <Content />
       <ReviewCarousel/>
-      <Footer/> {/* Add the Content component here */}
+      <Footer/> {}
     </div>
   );
 }
