@@ -24,7 +24,7 @@ const authors = [
 
 const AuthorsPage = () => {
   const [isVisible, setIsVisible] = useState(Array(authors.length).fill(false));
-  const [toggledIndex, setToggledIndex] = useState(null); // Track the toggled index for mobile
+  const [toggledIndex, setToggledIndex] = useState(null); 
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -33,17 +33,17 @@ const AuthorsPage = () => {
           const index = entry.target.getAttribute('data-index');
           setIsVisible((prev) => {
             const newVisible = [...prev];
-            newVisible[index] = true; // Mark this card as visible
+            newVisible[index] = true; 
             return newVisible;
           });
-          observer.unobserve(entry.target); // Stop observing this element
+          observer.unobserve(entry.target); 
         }
       });
     });
 
     const cards = document.querySelectorAll('.author-card');
     cards.forEach((card, index) => {
-      card.setAttribute('data-index', index); // Set index for each card
+      card.setAttribute('data-index', index); 
       observer.observe(card);
     });
 
@@ -53,7 +53,7 @@ const AuthorsPage = () => {
   }, []);
 
   const handleCardToggle = (index) => {
-    setToggledIndex(toggledIndex === index ? null : index); // Toggle the index
+    setToggledIndex(toggledIndex === index ? null : index); 
   };
 
   return (
@@ -65,7 +65,7 @@ const AuthorsPage = () => {
             key={index}
             className={`author-card ${isVisible[index] ? 'fade-in' : ''}`}
             style={{ transitionDelay: `${index * 0.1}s` }}
-            onClick={() => handleCardToggle(index)} // Handle click for mobile
+            onClick={() => handleCardToggle(index)} 
           >
             <ImageContainer>
               <AuthorImage src={author.image} alt={author.name} className={toggledIndex === index ? 'visible' : ''} />
@@ -84,7 +84,7 @@ const AuthorsPage = () => {
 
 export default AuthorsPage;
 
-// Styled Components
+
 const PageContainer = styled.div`
   padding: 50px;
   background-color: #f9f9f9;
@@ -113,54 +113,54 @@ const AuthorCard = styled.div`
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  position: relative; // Allow positioning of children
-  transition: transform 0.5s ease, opacity 0.5s ease; // Increased transition time
-  opacity: 0; // Start hidden
-  transform: translateY(20px) scale(0.9); // Start below the view and smaller
+  position: relative; 
+  transition: transform 0.5s ease, opacity 0.5s ease; 
+  opacity: 0; 
+  transform: translateY(20px) scale(0.9);
 
   &.fade-in {
-    opacity: 1; // Fade in
-    transform: translateY(0) scale(1); // Move to original position and scale to normal size
+    opacity: 1; 
+    transform: translateY(0) scale(1); 
   }
 
   &:hover {
-    transform: translateY(-5px) scale(1.05); // Elevate and scale up on hover
+    transform: translateY(-5px) scale(1.05); 
   }
 `;
 
 const ImageContainer = styled.div`
-  height: 200px; // Keep this height to fit the images
-  overflow: hidden; // Hide overflow for the effect
-  position: relative; // Allow absolute positioning of the image
+  height: 200px; 
+  overflow: hidden; 
+  position: relative;
 `;
 
 const AuthorImage = styled.img`
   width: 400px;
   object-fit: cover;
-  position: absolute; // Position absolutely to overlap text
-  top: 0; // Align to top
-  left: 0; // Align to left
-  transition: opacity 0.3s; // Transition for the image opacity
-  opacity: 0; // Start hidden
-  z-index: 1; // Layer below the text
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  transition: opacity 0.3s; 
+  opacity: 0; 
+  z-index: 1; 
 
   &.visible {
-    opacity: 1; // Show image when toggled
+    opacity: 1; 
   }
 `;
 
 const AuthorDetails = styled.div`
-  padding: 15px; // Adjusted padding for a more compact look
-  position: relative; // Position relative to layer above the image
-  z-index: 2; // Layer above the image
+  padding: 15px; 
+  position: relative; 
+  z-index: 2; 
 
   h3 {
-    margin: 0 0 5px; // Reduced margin
+    margin: 0 0 5px; 
     color: #333;
   }
 
   h4 {
-    margin: 0 0 5px; // Reduced margin
+    margin: 0 0 5px; 
     color: #007bff;
   }
 
