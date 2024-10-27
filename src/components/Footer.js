@@ -18,7 +18,7 @@ const Footer = () => {
 
 export default Footer;
 
-// Styled Components
+
 const FooterContainer = styled.footer`
   background-color: #333;
   color: #fff;
