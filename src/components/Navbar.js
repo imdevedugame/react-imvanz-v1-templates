@@ -9,15 +9,15 @@
     useEffect(() => {
         const handleScroll = () => {
         if (window.scrollY > 50) {
-            setScrolling(true); // Change state when scrolled more than 50px
+            setScrolling(true); 
         } else {
-            setScrolling(false); // Reset state when at the top
+            setScrolling(false); 
         }
         };
 
-        window.addEventListener('scroll', handleScroll); // Attach scroll event listener
+        window.addEventListener('scroll', handleScroll); 
 
-        // Clean up the event listener on component unmount
+   
         return () => {
         window.removeEventListener('scroll', handleScroll);
         };
@@ -39,29 +39,28 @@
 
     export default Navbar;
 
-    // Styled Components
+  
     const Nav = styled.nav`
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 1rem 2rem;
-    padding-left: 1rem; /* Additional padding on the left */
-    background: rgba(0, 0, 0, 0.2); /* Light transparent background */
-    backdrop-filter: blur(10px); /* Adds a blur effect for a frosted glass look */
+    padding-left: 1rem;
+    background: rgba(0, 0, 0, 0.2); 
+    backdrop-filter: blur(10px); 
     position: fixed;
     width: 100%;
     z-index: 10;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-    transition: background-color 0.3s; /* Smooth transition for background color */
-    background-color: ${props => (props.scrolling ? '#000' : 'rgba(0, 0, 0, 0.2)')}; /* Change to black when scrolling */
-    `;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+    transition: background-color 0.3s; 
+    background-color: ${props => (props.scrolling ? '#000' : 'rgba(0, 0, 0, 0.2)')};
 
     const Logo = styled.div`
     font-size: 1.8rem;
-    color: ${props => (props.scrolling ? '#fff' : '#00e0ff')}; /* Change color to white when scrolling */
+    color: ${props => (props.scrolling ? '#fff' : '#00e0ff')}; 
     font-weight: bold;
     letter-spacing: 2px;
-    text-shadow: 0 0 1px #00e0ff, 0 0 1px #00e0ff, 0 0 5px #00e0ff; /* Neon glow effect */
+    text-shadow: 0 0 1px #00e0ff, 0 0 1px #00e0ff, 0 0 5px #00e0ff;
     cursor: pointer;
     `;
 
@@ -71,7 +70,7 @@
     `;
 
     const NavLink = styled.a`
-    color: ${props => (props.scrolling ? '#fff' : 'white')}; /* Change link color to white when scrolling */
+    color: ${props => (props.scrolling ? '#fff' : 'white')}; 
     text-decoration: none;
     font-size: 1rem;
     padding: 0.5rem 1rem;
