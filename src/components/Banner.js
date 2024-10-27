@@ -4,7 +4,7 @@ import videoSrc from '../ku.mp4';
 import { Wave } from 'react-animated-text';
 
 const Banner = () => {
-  const [isHovered, setIsHovered] = useState(false); // State for hover
+  const [isHovered, setIsHovered] = useState(false); 
 
   return (
     <BannerContainer isHovered={isHovered}>
@@ -16,8 +16,8 @@ const Banner = () => {
           <Wave text="ANIME IMVANZ" effect="fadeOut" effectChange={1.0} />
         </TextSecondary>
         <StartButton 
-          onMouseEnter={() => setIsHovered(true)} // Set state on mouse enter
-          onMouseLeave={() => setIsHovered(false)} // Reset state on mouse leave
+          onMouseEnter={() => setIsHovered(true)} 
+          onMouseLeave={() => setIsHovered(false)} 
         >
           Mulai
         </StartButton>
@@ -39,14 +39,12 @@ const BannerContainer = styled.div`
   }
 `;
 
-// Background Video
 const VideoBg = styled.video`
   width: 100%;
   height: 100%;
   object-fit: cover;
 `;
 
-// Floating particles animation
 const particleAnimation = keyframes`
   0% { transform: translateY(0) translateX(0); opacity: 1; }
   50% { transform: translateY(-20px) translateX(10px); opacity: 0.8; }
@@ -79,7 +77,7 @@ const TextOverlay = styled.div`
   }
 `;
 
-// 3D Effect for Primary Text
+
 const TextPrimary = styled.h1`
   font-size: 4rem;
   margin-top: 10px;
@@ -91,7 +89,7 @@ const TextPrimary = styled.h1`
   }
 `;
 
-// 3D Glow Effect for Secondary Text
+
 const TextSecondary = styled.h1`
   font-size: 4rem;
   color: transparent;
@@ -108,7 +106,7 @@ const TextSecondary = styled.h1`
   }
 `;
 
-// Animated Border for Button
+
 const animatedBorder = keyframes`
   0% { border-color: rgba(0, 224, 255, 0.7); }
   50% { border-color: rgba(0, 123, 255, 1); }
